@@ -9,7 +9,7 @@ public class Calculator{
 		int num1 = in.nextInt();
 		System.out.println(" Enter your Second Number");
 		int num2 = in.nextInt();
-		int sum = num1+ num2;
+		int sum =+ num1+ num2;
 		System.out.println(" The sum is " + sum);
 		
 	}
@@ -53,7 +53,7 @@ public class Calculator{
 		int num1 = in.nextInt();
 		System.out.println(" Enter your Second Number");
 		int num2 = in.nextInt();
-		int sum = num1+ num2;
+		int sum =+ num1+ num2;
 		int average = sum / 2;
 		System.out.println(" The Average is " + average);
 		
@@ -69,16 +69,28 @@ public class Calculator{
 		System.out.println(" The Modulus is " + modulus);
 		
 	}
-// Finding the Square Root of a number
-	public static void squareRoot(){
-		System.out.println(" Enter Number");
+//Finding the power of a number
+	public static void power(){
+		System.out.println(" Enter your First Number");
 		Scanner in = new Scanner(System.in);
 		int num1 = in.nextInt();
-		double squareRoot = Math.sqrt(num1);
-		System.out.println(" The Square Root 1s " + squareRoot);
+		System.out.println(" Enter the Number it is being raised to");
+		int num2 = in.nextInt();
+		System.out.println(" The Power is " + power(num1,num2));
+
 		
 	}
 
+	public static int power(int baseNum, int numBeingRaisedTo){
+		int answer = 1;
+		for(int i= 1; i <= numBeingRaisedTo; i++){
+			answer *= baseNum;
+
+		}
+		return answer;
+
+		
+	}
 
 
 	
@@ -89,7 +101,7 @@ public class Calculator{
 		
 
 
-		System.out.println(" Select operation to perform \n 1. Add \n 2. subtract \n 3. Multiply \n 4. Divide \n 5. Average \n 6. Modulus \n 7. Square Root " );
+		System.out.println(" Select operation to perform \n 1. Add \n 2. subtract \n 3. Multiply \n 4. Divide \n 5. Average \n 6. Modulus \n 7. Power" );
 		option = in.nextInt();
 		if (option ==1){
 			add();
@@ -105,7 +117,7 @@ public class Calculator{
 		} else if (option ==6){
 			modulus();
 		} else if (option ==7){
-			squareRoot();
+			power();
 		} 
 
 
